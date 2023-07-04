@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create Post</title>
+    <link rel="stylesheet" href="/static/create_post.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <a class="home" href="/">Mek Board</a>
+    </div>
+    <form class="Create" action="{{ url_for('create_post') }}" method="post">
+        <input type="text" id="title" name="title" placeholder="Your Title...." required>
+        <div></div><i class="fa fa-user-circle-o"></i><input type="text" id="author" name="author" placeholder="Your Name..." required>
+        <textarea id="content" name="content" rows="5" cols="40" placeholder="Your Content...."
+            required></textarea>
+        <button type="submit">Create Post</button>
+    </form>
+
+</body>
+
+</html>

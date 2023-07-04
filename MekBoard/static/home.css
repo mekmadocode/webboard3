@@ -1,0 +1,61 @@
+
+.post{
+    background-color: #404040;
+    margin: 20px min(5vw,30px);
+    width: auto;
+    padding: 20px;
+    border-radius: 20px;
+    height: fit-content;
+}
+.post > * {
+    position: relative;
+    margin-bottom: 10px;
+    /* border: red 2px solid; */
+
+}
+.post .title{
+    font-size: 30px;
+    text-decoration: none;
+    color: rgb(78, 255, 108);
+}
+
+.post .content{
+    height: fit-content;
+    max-height: 50px;
+    overflow: hidden;
+    font-size: 20px;
+}   
+.post .info{
+    color:rgb(200, 200, 200);
+    font-size: 18px;
+}
+.post .feedback * {
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+
+@media only screen and (max-device-width: 480px) {
+
+    .post .title{
+        font-size: 4rem;
+
+    }
+    
+    .post .content{
+        font-size: 3rem;
+        height: fit-content;
+        max-height: 120px;
+        overflow: hidden;
+    }   
+    .post .info{
+        font-size: 1.5rem;
+    }
+    .post .info i{
+        font-size: 3rem;
+        margin-right: 10px;
+    }
+    .post .feedback * {
+        font-size: 3rem;
+    }
+}

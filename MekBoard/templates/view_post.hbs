@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ post.title }}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="/static/view_post.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <a class="home" href="/">Mek Board</a>
+        <a class="button" href="{{ url_for('create_post') }}">Create Post</a>
+    </div>
+    <div class="post">
+        <div class="postdata">
+            <div class="title">{{ post.title }}</div>
+            <div class="info">
+                {{ post.author }} | {{ post.timestamp }}
+            </div>
+            <div class="content">{{ post.content }}</div>
+
+            <div class="feedback">
+                <form method="POST">
+                    <button class="button" type="submit" name="like"><i class="fa fa-thumbs-up"></i>
+                    </button>
+                    <span>{{ post.likes }}</span>
+                </form>
+            </div>
+        </div>
+
+        <div class="allcomments">
+            <div class="title">Comments <i class="fa fa-commenting-o"> {{ post.comment_count }}</i></div>
+
+            <div class="addCom">
+                <form method="POST">
+                    <i class="fa fa-user-circle-o"></i><input type="text" name="author" placeholder="Your Name" required> 
+                    
+                    <br>
+                    <textarea name="comment" placeholder="Your Comment...." required></textarea>
+                    <button type="submit">Add Comment</button>
+                </form>
+            </div>
+    {% if post.comments %}
+        {% for comment in post.comments %}
+
+            <div class="comment">
+
+                <div class="info"><i class="fa fa-user-circle-o"></i>
+                    {{ comment.author }} | {{ comment.timestamp }}</div>
+                <div class="content">{{ comment.text }}</div>
+
+            </div>
+                {% endfor %}
+
+    {% else %}
+    <div class="comment">No comments yet.</div>
+    {% endif %}
+
+
+    </div>
+
+</body>
+
+</html>

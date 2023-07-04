@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    background-color: #303030;
+
+}
+
+body * {
+    color: rgb(232, 232, 232)
+}
+
+/* * {
+    box-sizing: border-box;
+  } */
+
+.header {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: #b5b5b5e8;
+    height: 50px;
+    z-index: 1;
+}
+.header .home{
+    margin: 0;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    padding: 6px 20px;
+    color: #303030;
+    text-decoration: none;
+    font-size: 35px;
+    /* border: red 3px solid; */
+}
+.header .button{
+    height: 30px;
+    position: relative;
+    margin: 5px 20px 6px 0px;
+    padding: 5px 20px 0px 20px;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 20px; 
+    background-color: rgb(255, 166, 0);
+    float: right;
+    border-radius: 20px;
+    border: white 2px solid;
+}
+.header .button:hover{
+    scale: 1.1;
+    background-color: rgb(205, 133, 0);
+    transition: all 0.2s;
+}
+
+
+
+@media only screen and (max-device-width: 480px) {
+    body{
+        font-size: 1rem;
+    }
+    .header {
+        height: 90px;
+    }
+    .header .home{
+        margin: 0;
+        height: fit-content;
+        display: inline-block;
+        position: relative;
+        padding: 6px 20px;
+        color: #303030;
+        text-decoration: none;
+        font-size: 5rem;
+        /* border: red 3px solid; */
+    }
+    .header .button{
+        height: fit-content;
+        position: relative;
+        margin: 5px 10px 10px 0px;
+        padding: 5px 20px 5px 20px;
+        color: #FFF;
+        text-decoration: none;
+        font-size: 3.5rem; 
+        background-color: rgb(255, 166, 0);
+        float: right;
+        border-radius: 50px;
+        border: white 2px solid;
+    }
+    .header .button:hover{
+        scale: 1.1;
+        background-color: rgb(205, 133, 0);
+        transition: all 0.2s;
+    }
+  }

@@ -1,0 +1,72 @@
+
+.Create{
+    /* border: red 3px solid; */
+    background-color: #404040;
+    margin: 20px min(5vw,30px);
+    width: auto;
+    padding: 20px;
+    border-radius: 20px;
+    height: fit-content;
+}
+.Create > *{
+    position: relative;
+    margin: 5px 0px;
+    /* border: red 3px solid; */
+    border: none;
+    background-color: transparent;
+
+}
+.Create i{
+    font-size: 20px;
+}
+.Create #title{
+    font-size: 30px;
+    text-decoration: none;
+    color: rgb(78, 255, 108);
+}
+.Create #author{
+    color:rgb(200, 200, 200);
+    font-size: 18px;
+}
+.Create #content{
+    height: 150px;
+    overflow: hidden;
+    font-size: 20px;
+    width: 100%;
+    color: rgb(232, 232, 232)
+
+}
+
+.Create button{
+    background-color: rgb(115, 255, 255);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #303030;
+}
+.Create button:hover{
+    background-color: rgb(91, 203, 203);
+
+}
+
+@media only screen and (max-device-width: 480px) {
+
+    .Create i{
+        font-size: 3rem;
+    }
+    .Create #title{
+        font-size: 4rem;
+
+    }
+    .Create #author{
+        font-size: 3rem;
+    }
+    .Create #content{
+        font-size: 3.5rem;
+    }
+    
+    .Create button{
+        font-size: 2rem;
+    }
+
+  }

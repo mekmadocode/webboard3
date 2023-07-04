@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mek Board</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <a class="home" href="/">Mek Board</a>
+        <a class="button" href="{{ url_for('create_post') }}">Create Post</a>
+    </div>
+
+    <div class="allposts">
+        {% for post in posts %}
+        <div class="post">
+            <div><a class="title" href="{{ url_for('view_post', post_id=post.id) }}">{{ post.title }}</a></div>
+            <div class="content">{{ post.content }}</div>
+            <div class="info">
+                <i class="fa fa-user-circle-o"></i> {{ post.author }} | {{ post.timestamp }}
+            </div>
+            <div class="feedback">
+                <i class="fa fa-thumbs-o-up"> {{ post.likes }}</i>
+                <i class="fa fa-commenting-o"> {{ post.comment_count }}</i>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+    <script type="module" src="/javascript/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ post.title }}</title>
+    <link rel="stylesheet" href="/static/view_post.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <a class="home" href="/">Mek Board</a>
+        <a class="button" href="{{ url_for('create_post') }}">Create Post</a>
+    </div>
+    <div class="post">
+        <div class="postdata">
+            <div class="title">Breaking cookies</div>
+            <div class="info">
+                Mek Peedee | 02 Jul 2023 - 20:32:34
+            </div>
+            <div class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus distinctio ipsa
+                debitis dolorum, esse quis totam accusantium culpa quaerat eum corporis praesentium? Sequi nobis tempore
+                est adipisci? Voluptate molestiae voluptas dolorem. Asperiores reprehenderit architecto quasi, sapiente
+                sit quae quas, aperiam magnam officia aliquid necessitatibus nemo tempora distinctio beatae quaerat
+                earum dolores accusamus laborum repellendus harum fugit dolorum alias? Facilis quis odit ut autem
+                nostrum odio eos incidunt ullam hic aliquid maxime, deserunt libero alias? Distinctio nam recusandae
+                sapiente doloremque repellendus non odio dolore a animi sint nihil quos magnam, iste perferendis.
+                Similique consectetur dicta mollitia explicabo distinctio architecto illum rem, laboriosam aliquid
+                maxime ab corporis et voluptates aperiam. Odit eaque, quisquam voluptates tempore ad ullam corrupti
+                cupiditate quo sequi voluptas. Voluptates porro accusamus expedita minima ipsum, odio error at.
+                Accusantium praesentium neque ea ipsa ullam obcaecati sequi rem cumque, numquam tempore magni minus,
+                totam corrupti libero dolore? Quidem molestias officiis omnis, possimus deserunt et necessitatibus
+                cumque culpa ut earum quo illo tempora quibusdam. Explicabo dolor animi adipisci perferendis
+                consequuntur minima. Quidem, velit, at commodi hic minus, magnam blanditiis repudiandae iusto dolorum ab
+                quia et assumenda officiis laudantium nostrum voluptatem? Animi facere doloremque minima eius expedita
+                fuga culpa qui nisi? Minus! </div>
+
+            <div class="feedback">
+                <form method="POST">
+                    <button class="button" type="submit" name="like"><i class="fa fa-thumbs-up"></i>
+                    </button>
+                    <span>5</span>
+                </form>
+            </div>
+        </div>
+
+
+
+
+        <div class="allcomments">
+            <div class="title">Comments <i class="fa fa-commenting-o"> 32</i></div>
+
+            <div class="addCom">
+                <form method="POST">
+                    <i class="fa fa-user-circle-o"></i><input type="text" name="author" placeholder="Your Name" required> 
+                    
+                    <br>
+                    <textarea name="comment" placeholder="Your Comment...." required></textarea>
+                    <button type="submit">Add Comment</button>
+                </form>
+            </div>
+
+
+            <div class="comment">
+
+                <div class="info"><i class="fa fa-user-circle-o"></i>
+                    mekmek commm. | 02 Jul 2023 - 20:35:54</div>
+                <div class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas cumque dolorum animi
+                    nostrum tenetur similique explicabo non excepturi temporibus nemo!</div>
+
+            </div>
+
+            <div class="comment">
+
+                <div class="info"><i class="fa fa-user-circle-o"></i>
+                    mekmek commm. | 02 Jul 2023 - 20:35:54</div>
+                <div class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas cumque dolorum animi
+                    nostrum tenetur similique explicabo non excepturi temporibus nemo!</div>
+
+            </div>
+        </div>
+        <!-- <div>No comments yet.</div> -->
+
+
+    </div>
+
+</body>
+
+</html>

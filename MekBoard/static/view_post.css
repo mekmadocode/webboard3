@@ -1,0 +1,131 @@
+
+.post{
+    margin: 20px min(5vw,30px);
+    width: auto;
+
+    height: fit-content;
+}
+.postdata > *{
+    position: relative;
+    margin-bottom: 10px;
+    /* border: red 2px solid; */
+
+}
+.postdata{
+    margin-bottom: 20px;
+}
+.postdata .title{
+    font-size: 40px;
+    text-decoration: none;
+    color: rgb(78, 255, 108);
+}
+
+.post .content{
+    height: fit-content;
+    max-height: 300px;
+    overflow: auto;
+    font-size: 20px;
+    background-color: #404040;
+    padding: 10px;
+    border-radius: 20px;
+}   
+.post .info{
+    color:rgb(200, 200, 200);
+    font-size: 18px;
+}
+
+.post .feedback span {
+    font-size: 20px;
+}
+.postdata .feedback .button {
+    font-size: 30px;
+    padding: 0px;
+    margin: 0px 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    /* border: red 2px solid; */
+}
+
+.postdata .title2{
+    font-size: 20px;
+    text-decoration: none;
+}
+/* .allcomments{
+    border: red 3px solid;
+
+} */
+
+.allcomments .title{
+    font-size: 25px;
+}
+.allcomments .addCom{
+    background-color: #404040;
+    border-radius: 20px;
+    padding: 10px;
+}
+.allcomments .addCom  * {
+    border: none;
+    background-color: transparent;
+    font-size: 17px;
+}
+.allcomments .addCom textarea{
+    width: 100%;
+}
+.allcomments .addCom button{
+    background-color: rgb(115, 255, 255);
+    color: #303030;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.allcomments .addCom button:hover{
+    background-color: rgb(91, 203, 203);
+
+}
+
+.comment{
+    height: fit-content;
+    /* border: orange 3px solid; */
+    margin-top: 20px;
+
+}
+
+@media only screen and (max-device-width: 480px) {
+    
+    .postdata .title{
+        font-size: 4rem;
+    }
+    
+    .post .content{
+        font-size: 3.5rem;
+    }   
+    .post .info{
+        font-size: 2.5rem;
+    }
+    
+    .post .feedback span {
+        font-size: 3rem;
+    }
+    .postdata .feedback .button {
+        font-size: 3.5rem;
+    }
+    
+    
+    .allcomments .title{
+        font-size: 3rem;
+    }
+
+    .allcomments .addCom  * {
+        font-size: 2.5rem;
+    }
+
+    .allcomments .comment .content{
+        font-size: 3rem;
+    }
+    .allcomments .comment .info{
+        font-size: 2.5rem;
+    }
+}
+
+
